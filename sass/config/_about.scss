@@ -1,0 +1,16 @@
+@use "./variables" as var;
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 560px 1fr;
+  min-height: 30vh;
+
+  &__column1 {
+    background-image: url("../../images/image-about-dark.jpg");
+    height: 100%;
+  }
+
+  &__column3 {
+    background-image: url("../../images/image-about-light.jpg");
+  }
+}

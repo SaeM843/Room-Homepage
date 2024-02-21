@@ -3,6 +3,7 @@
 .slider {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  min-height: 70vh;
 
   &__img--wrapper {
     grid-column: 1 /8;
@@ -18,7 +19,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    min-height: 534px;
+    // min-height: 534px;
 
     &:nth-child(1) {
       background-image: url("../../images/desktop-image-hero-1.jpg");
@@ -41,8 +42,8 @@
     left: 100%;
 
     .slider__btn {
-      width: 5rem;
-      height: 5rem;
+      width: 4.9rem;
+      height: 4.9rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -58,7 +59,7 @@
 
   &__text--wrapper {
     grid-column: 8/13;
-    min-height: 534px;
+    // min-height: 534px;
     position: relative;
   }
 

@@ -36,6 +36,7 @@ li {
 body {
   font-size: 12px;
   font-family: "League Spartan", sans-serif;
+  height: 100vh;
 }
 
 .header {
@@ -86,6 +87,7 @@ body {
 .slider {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  min-height: 70vh;
 }
 .slider__img--wrapper {
   grid-column: 1/8;
@@ -100,7 +102,6 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  min-height: 534px;
 }
 .slider__img:nth-child(1) {
   background-image: url("../../images/desktop-image-hero-1.jpg");
@@ -119,8 +120,8 @@ body {
   left: 100%;
 }
 .slider__btn--wrapper .slider__btn {
-  width: 5rem;
-  height: 5rem;
+  width: 4.9rem;
+  height: 4.9rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,7 +134,6 @@ body {
 }
 .slider__text--wrapper {
   grid-column: 8/13;
-  min-height: 534px;
   position: relative;
 }
 .slider__text {
@@ -173,6 +173,19 @@ body {
 }
 .slider__text.active-text {
   display: block;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 560px 1fr;
+  min-height: 30vh;
+}
+.about__column1 {
+  background-image: url("../../images/image-about-dark.jpg");
+  height: 100%;
+}
+.about__column3 {
+  background-image: url("../../images/image-about-light.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */
