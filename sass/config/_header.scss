@@ -1,0 +1,17 @@
+.header__wrapper {
+  background-image: url("../../images/desktop-image-hero-1.jpg");
+  display: flex;
+
+  .header__nav--mobile,
+  .header__close-icon {
+    display: none;
+  }
+
+  .header__nav {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

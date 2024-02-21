@@ -24,4 +24,18 @@ body {
   font-family: "League Spartan", sans-serif;
 }
 
+.header__wrapper {
+  background-image: url("../../images/desktop-image-hero-1.jpg");
+  display: flex;
+}
+.header__wrapper .header__nav--mobile,
+.header__wrapper .header__close-icon {
+  display: none;
+}
+.header__wrapper .header__nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*# sourceMappingURL=style.css.map */
