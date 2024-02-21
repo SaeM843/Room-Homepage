@@ -1,0 +1,109 @@
+@use "./variables" as var;
+
+.slider {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  &__img--wrapper {
+    grid-column: 1 /8;
+    position: relative;
+  }
+
+  &__img {
+    background-image: url("../../images/desktop-image-hero-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 534px;
+
+    &:nth-child(1) {
+      background-image: url("../../images/desktop-image-hero-1.jpg");
+    }
+
+    &:nth-child(2) {
+      background-image: url("../../images/desktop-image-hero-2.jpg");
+    }
+
+    &:nth-child(3) {
+      background-image: url("../../images/desktop-image-hero-3.jpg");
+    }
+  }
+
+  &__btn--wrapper {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 100%;
+
+    .slider__btn {
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: var.$black;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var.$very-dark-gray;
+      }
+    }
+  }
+
+  &__text--wrapper {
+    grid-column: 8/13;
+    min-height: 534px;
+    position: relative;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding: 6rem;
+
+    .heading {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .desc {
+      color: var.$dark-gray;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .arrow-icon {
+      display: flex;
+
+      span {
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var.$black;
+        font-size: 1rem;
+        letter-spacing: 0.8rem;
+      }
+
+      img {
+        margin-left: 1.5rem;
+      }
+    }
+
+    &.active-text {
+      display: block;
+    }
+  }
+}
