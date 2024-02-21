@@ -7,10 +7,27 @@
 
   &__column1 {
     background-image: url("../../images/image-about-dark.jpg");
-    height: 100%;
   }
 
   &__column3 {
     background-image: url("../../images/image-about-light.jpg");
+  }
+
+  &__column2 {
+    padding: 9% 8%;
+
+    h2 {
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.5rem;
+      margin-bottom: 13px;
+    }
+
+    p {
+      color: var.$dark-gray;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.3rem;
+    }
   }
 }
