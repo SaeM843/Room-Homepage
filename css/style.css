@@ -41,14 +41,42 @@ body {
 .header__wrapper {
   background-image: url("../../images/desktop-image-hero-1.jpg");
   display: flex;
+  align-items: center;
+  padding: 0 5rem;
+  min-height: 8rem;
 }
 .header__hamburger--mobile, .header__close-icon {
   display: none;
 }
-.header.header__nav ul {
+.header img {
+  object-fit: contain;
+}
+.header__nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.header__nav ul li a {
+  color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  text-transform: lowercase;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+}
+.header__nav ul li a::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: hsl(0, 0%, 100%);
+  bottom: 12px;
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+.header__nav ul li a:hover::after {
+  width: calc(70% - 20px);
 }
 
 /*# sourceMappingURL=style.css.map */

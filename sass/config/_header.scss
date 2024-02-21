@@ -1,7 +1,12 @@
+@use "./variables" as var;
+
 .header {
   &__wrapper {
     background-image: url("../../images/desktop-image-hero-1.jpg");
     display: flex;
+    align-items: center;
+    padding: 0 5rem;
+    min-height: 8rem;
   }
 
   &__hamburger--mobile,
@@ -9,11 +14,40 @@
     display: none;
   }
 
-  &.header__nav {
+  img {
+    object-fit: contain;
+  }
+
+  &__nav {
     ul {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      li a {
+        color: var.$white;
+        padding: 1rem;
+        text-transform: lowercase;
+        font-size: 18px;
+        font-weight: 500;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: "";
+          left: 50%;
+          width: 0;
+          height: 2px;
+          background: hsl(0, 0%, 100%);
+          bottom: 12px;
+          transition: 0.3s;
+          transform: translateX(-50%);
+        }
+
+        &:hover::after {
+          width: calc(70% - 20px);
+        }
+      }
     }
   }
 }
