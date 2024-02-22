@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   // min-height: 70vh;
+  overflow: hidden;
 
   @include responsive() {
     // grid-template-columns: 1fr;
@@ -17,6 +18,7 @@
     grid-column: 1 /8;
     position: relative;
     min-height: 70vh;
+    // overflow: hidden;
 
     @include responsive() {
       // grid-column: 1/2;
@@ -33,7 +35,12 @@
     position: absolute;
     left: 0;
     top: 0;
+    opacity: 0;
     // min-height: 534px;
+
+    &.active-photo {
+      opacity: 1;
+    }
 
     @include responsive() {
       background-image: url("../../images/mobile-image-hero-1.jpg");
@@ -92,6 +99,7 @@
   &__text--wrapper {
     grid-column: 8/13;
     position: relative;
+    overflow: hidden;
   }
 
   &__text {
@@ -103,6 +111,11 @@
     height: 100%;
     display: none;
     padding: 6rem;
+    opacity: 0;
+
+    &.active-text {
+      opacity: 1;
+    }
 
     @include responsive() {
       padding: 4rem 2rem;

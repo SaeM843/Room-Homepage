@@ -138,6 +138,7 @@ body {
 .slider {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  overflow: hidden;
 }
 @media screen and (max-width: 480px) {
   .slider {
@@ -159,6 +160,10 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+  opacity: 0;
+}
+.slider__img.active-photo {
+  opacity: 1;
 }
 @media screen and (max-width: 480px) {
   .slider__img {
@@ -218,6 +223,7 @@ body {
 .slider__text--wrapper {
   grid-column: 8/13;
   position: relative;
+  overflow: hidden;
 }
 .slider__text {
   display: flex;
@@ -228,6 +234,10 @@ body {
   height: 100%;
   display: none;
   padding: 6rem;
+  opacity: 0;
+}
+.slider__text.active-text {
+  opacity: 1;
 }
 @media screen and (max-width: 480px) {
   .slider__text {
