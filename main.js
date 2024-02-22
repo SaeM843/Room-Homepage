@@ -3,6 +3,7 @@ const nextBtn = document.querySelector(".slider__btn--right");
 const sliderImgs = document.querySelectorAll(".slider__img");
 const sliderText = document.querySelectorAll(".slider__text");
 
+//Slider btns//
 const prevSlide = function () {
   const currentImg = document.querySelector(".active-photo");
   const currentText = document.querySelector(".active-text");
@@ -43,3 +44,8 @@ const nextSlide = function () {
 
 prevBtn.addEventListener("click", prevSlide);
 nextBtn.addEventListener("click", nextSlide);
+
+//Navigation//
+const hamburger = document.querySelector(".header__hamburger--mobile");
+const closeIcon = document.querySelector(".header__close-icon");
+const nav = document.querySelector(".header__nav");

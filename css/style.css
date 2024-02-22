@@ -58,13 +58,6 @@ body {
   min-height: 8rem;
 }
 @media screen and (max-width: 480px) {
-  .header__wrapper {
-    padding: 0 1rem;
-    background-color: hsl(0, 0%, 100%);
-    min-height: 4rem;
-  }
-}
-@media screen and (max-width: 480px) {
   .header__logo {
     position: absolute;
     left: 45%;
@@ -94,6 +87,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
   }
 }
 .header__nav ul {

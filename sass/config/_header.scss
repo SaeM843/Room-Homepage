@@ -13,11 +13,11 @@
     padding: 0 5rem;
     min-height: 8rem;
 
-    @include responsive() {
-      padding: 0 1rem;
-      background-color: var.$white;
-      min-height: 4rem;
-    }
+    // @include responsive() {
+    //   padding: 0 1rem;
+    //   background-color: var.$white;
+    //   min-height: 4rem;
+    // }
   }
 
   &__logo {
@@ -52,6 +52,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 100%;
+      background-color: var.$white;
     }
 
     ul {
