@@ -65,7 +65,7 @@ body {
 @media screen and (max-width: 480px) {
   .header__logo {
     position: absolute;
-    left: 50%;
+    left: 45%;
   }
 }
 .header__hamburger--mobile {
@@ -293,7 +293,6 @@ body {
 @media screen and (max-width: 480px) {
   .about__column2 {
     padding: 10% 7%;
-    width: 90%;
   }
 }
 .about__column2 h2 {
