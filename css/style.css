@@ -60,6 +60,8 @@ body {
 @media screen and (max-width: 480px) {
   .header__wrapper {
     padding: 0 1rem;
+    background-color: hsl(0, 0%, 100%);
+    min-height: 4rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -87,6 +89,13 @@ body {
 .header img {
   object-fit: contain;
 }
+@media screen and (max-width: 480px) {
+  .header__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .header__nav ul {
   display: flex;
   justify-content: center;
@@ -94,7 +103,8 @@ body {
 }
 @media screen and (max-width: 480px) {
   .header__nav ul {
-    display: none;
+    position: relative;
+    left: 20%;
   }
 }
 .header__nav ul li a {
