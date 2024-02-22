@@ -182,9 +182,11 @@ body {
 }
 .about__column1 {
   background-image: url("../../images/image-about-dark.jpg");
+  background-size: cover;
 }
 .about__column3 {
   background-image: url("../../images/image-about-light.jpg");
+  background-size: cover;
 }
 .about__column2 {
   padding: 9% 8%;
