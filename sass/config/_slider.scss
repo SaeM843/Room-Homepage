@@ -1,13 +1,27 @@
 @use "./variables" as var;
-
+@use "./mediaQuery" as *;
+@use "./base";
 .slider {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  min-height: 70vh;
+  // min-height: 70vh;
+
+  @include responsive() {
+    // grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: 1fr 1fr;
+  }
 
   &__img--wrapper {
     grid-column: 1 /8;
     position: relative;
+    min-height: 70vh;
+
+    @include responsive() {
+      // grid-column: 1/2;
+      // grid-row: 1/2;
+    }
   }
 
   &__img {
@@ -21,16 +35,29 @@
     top: 0;
     // min-height: 534px;
 
+    @include responsive() {
+      background-image: url("../../images/mobile-image-hero-1.jpg");
+    }
+
     &:nth-child(1) {
       background-image: url("../../images/desktop-image-hero-1.jpg");
+      @include responsive() {
+        background-image: url("../../images/mobile-image-hero-1.jpg");
+      }
     }
 
     &:nth-child(2) {
       background-image: url("../../images/desktop-image-hero-2.jpg");
+      @include responsive() {
+        background-image: url("../../images/mobile-image-hero-2.jpg");
+      }
     }
 
     &:nth-child(3) {
       background-image: url("../../images/desktop-image-hero-3.jpg");
+      @include responsive() {
+        background-image: url("../../images/mobile-image-hero-3.jpg");
+      }
     }
   }
 
@@ -40,6 +67,11 @@
     z-index: 1;
     bottom: 0;
     left: 100%;
+
+    @include responsive() {
+      left: unset;
+      right: 0;
+    }
 
     .slider__btn {
       width: 4.85rem;
@@ -61,6 +93,7 @@
     grid-column: 8/13;
     // min-height: 534px;
     position: relative;
+    // min-height: 70vh;
   }
 
   &__text {

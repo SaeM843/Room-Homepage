@@ -1,5 +1,6 @@
 @use "./variables" as var;
 @use "./mediaQuery" as *;
+@use "./base";
 
 .header {
   position: absolute;
@@ -13,7 +14,10 @@
     min-height: 8rem;
   }
 
-  &__hamburger--mobile,
+  &__hamburger--mobile {
+    display: none;
+  }
+
   &__close-icon {
     display: none;
   }

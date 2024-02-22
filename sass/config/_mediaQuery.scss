@@ -1,11 +1,5 @@
-$breakpoints: (
-  sm: 400px,
-  md: 768px,
-  xl: 1200px,
-);
-
-@mixin responsive($breakpoint) {
-  @media (width >= #{map-get($breakpoints, $breakpoint)}) {
+@mixin responsive() {
+  @media screen and (max-width: 480px) {
     @content;
   }
 }
