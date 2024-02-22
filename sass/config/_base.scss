@@ -10,11 +10,9 @@ body {
   @include responsive() {
     max-width: 100vw;
     max-height: 100vh;
+
+    &.dark {
+      background: rgba(148, 147, 147, 0.5);
+    }
   }
 }
-
-// .container {
-//   width: 100%;
-//   max-width: 144rem;
-//   margin: 0 auto;
-// }
