@@ -219,10 +219,20 @@ body {
   display: none;
   padding: 6rem;
 }
+@media screen and (max-width: 480px) {
+  .slider__text {
+    padding: 4rem 2rem;
+  }
+}
 .slider__text .heading {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 480px) {
+  .slider__text .heading {
+    font-size: 2.5rem;
+  }
 }
 .slider__text .desc {
   color: hsl(0, 0%, 63%);
@@ -230,6 +240,11 @@ body {
   font-weight: 600;
   line-height: 1.5;
   margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 480px) {
+  .slider__text .desc {
+    margin-bottom: 4rem;
+  }
 }
 .slider__text .arrow-icon {
   display: flex;
