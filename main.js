@@ -22,5 +22,24 @@ const prevSlide = function () {
   }
 };
 
+const nextSlide = function () {
+  const currentImg = document.querySelector(".active-photo");
+  const currentText = document.querySelector(".active-text");
+
+  currentImg.classList.remove("active-photo");
+  currentText.classList.remove("active-text");
+
+  if (
+    currentImg.nextElementSibling &&
+    currentImg.nextElementSibling.classList.contains("slider__img")
+  ) {
+    currentImg.nextElementSibling.classList.add("active-photo");
+    currentText.nextElementSibling.classList.add("active-text");
+  } else {
+    sliderImgs[0].classList.add("active-photo");
+    sliderText[0].classList.add("active-text");
+  }
+};
+
 prevBtn.addEventListener("click", prevSlide);
-// nextBtn.addEventListener("click", nextSlide);
+nextBtn.addEventListener("click", nextSlide);
