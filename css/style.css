@@ -45,8 +45,18 @@ body {
     max-height: 100vh;
   }
   body.dark {
-    background: rgba(148, 147, 147, 0.5);
+    background: rgba(100, 100, 100, 0.8);
   }
+}
+
+#fullOverlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(100, 100, 100, 0.8);
+  z-index: 2147483647;
 }
 
 .header {
@@ -154,6 +164,11 @@ body {
   grid-column: 1/8;
   position: relative;
   min-height: 70vh;
+}
+@media screen and (max-width: 480px) {
+  .slider__img--wrapper {
+    min-height: 85vh;
+  }
 }
 .slider__img {
   background-image: url("../../images/desktop-image-hero-1.jpg");
@@ -305,6 +320,9 @@ body {
 @media screen and (max-width: 480px) {
   .about__column1 {
     grid-column: 1/2;
+  }
+  .about__column1.dark {
+    filter: blur(2px);
   }
 }
 .about__column3 {

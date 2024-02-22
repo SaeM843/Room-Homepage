@@ -17,6 +17,10 @@
 
     @include responsive() {
       grid-column: 1/2;
+
+      &.dark {
+        filter: blur(2px);
+      }
     }
   }
 
