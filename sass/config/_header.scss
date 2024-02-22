@@ -12,14 +12,33 @@
     align-items: center;
     padding: 0 5rem;
     min-height: 8rem;
+
+    @include responsive() {
+      padding: 0 1rem;
+    }
+  }
+
+  &__logo {
+    @include responsive() {
+      position: absolute;
+      left: 50%;
+    }
   }
 
   &__hamburger--mobile {
     display: none;
+
+    @include responsive() {
+      display: block;
+    }
   }
 
   &__close-icon {
     display: none;
+
+    @include responsive() {
+      display: block;
+    }
   }
 
   img {
@@ -31,6 +50,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @include responsive() {
+        display: none;
+      }
 
       li a {
         color: var.$white;
@@ -54,6 +77,10 @@
 
         &:hover::after {
           width: calc(70% - 20px);
+        }
+
+        @include responsive() {
+          color: var.$black;
         }
       }
     }

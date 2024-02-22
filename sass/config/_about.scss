@@ -1,13 +1,23 @@
 @use "./variables" as var;
+@use "./mediaQuery" as *;
 
 .about {
   display: grid;
   grid-template-columns: 1fr 560px 1fr;
   min-height: 30vh;
 
+  @include responsive() {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
   &__column1 {
     background-image: url("../../images/image-about-dark.jpg");
     background-size: cover;
+
+    @include responsive() {
+      grid-column: 1/2;
+    }
   }
 
   &__column3 {

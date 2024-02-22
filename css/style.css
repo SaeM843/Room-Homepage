@@ -57,11 +57,32 @@ body {
   padding: 0 5rem;
   min-height: 8rem;
 }
+@media screen and (max-width: 480px) {
+  .header__wrapper {
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header__logo {
+    position: absolute;
+    left: 50%;
+  }
+}
 .header__hamburger--mobile {
   display: none;
 }
+@media screen and (max-width: 480px) {
+  .header__hamburger--mobile {
+    display: block;
+  }
+}
 .header__close-icon {
   display: none;
+}
+@media screen and (max-width: 480px) {
+  .header__close-icon {
+    display: block;
+  }
 }
 .header img {
   object-fit: contain;
@@ -70,6 +91,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .header__nav ul {
+    display: none;
+  }
 }
 .header__nav ul li a {
   color: hsl(0, 0%, 100%);
@@ -93,6 +119,11 @@ body {
 .header__nav ul li a:hover::after {
   width: calc(70% - 20px);
 }
+@media screen and (max-width: 480px) {
+  .header__nav ul li a {
+    color: hsl(0, 0%, 0%);
+  }
+}
 
 .slider {
   display: grid;
@@ -102,7 +133,6 @@ body {
   .slider {
     display: flex;
     flex-direction: column;
-    grid-template-rows: 1fr 1fr;
   }
 }
 .slider__img--wrapper {
@@ -223,9 +253,20 @@ body {
   grid-template-columns: 1fr 560px 1fr;
   min-height: 30vh;
 }
+@media screen and (max-width: 480px) {
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
 .about__column1 {
   background-image: url("../../images/image-about-dark.jpg");
   background-size: cover;
+}
+@media screen and (max-width: 480px) {
+  .about__column1 {
+    grid-column: 1/2;
+  }
 }
 .about__column3 {
   background-image: url("../../images/image-about-light.jpg");
