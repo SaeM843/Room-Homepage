@@ -28,11 +28,20 @@
   &__column2 {
     padding: 9% 8%;
 
+    @include responsive() {
+      padding: 10% 7%;
+      width: 90%;
+    }
+
     h2 {
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 0.5rem;
       margin-bottom: 13px;
+
+      @include responsive() {
+        margin-bottom: 25px;
+      }
     }
 
     p {
