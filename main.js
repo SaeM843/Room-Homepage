@@ -49,15 +49,16 @@ nextBtn.addEventListener("click", nextSlide);
 const hamburger = document.querySelector(".header__hamburger--mobile");
 const closeIcon = document.querySelector(".header__close-icon");
 const nav = document.querySelector(".header__nav");
+const overlay = document.querySelector("#overlay");
 
 const openNav = function () {
   nav.classList.add("open");
-  document.body.classList.add("dark");
+  overlay.classList.add("dark");
 };
 
 const closeNav = function () {
   nav.classList.remove("open");
-  document.body.classList.remove("dark");
+  overlay.classList.remove("dark");
 };
 
 hamburger.addEventListener("click", openNav);

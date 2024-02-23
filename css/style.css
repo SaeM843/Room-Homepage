@@ -41,22 +41,20 @@ body {
 }
 @media screen and (max-width: 480px) {
   body {
-    max-width: 100vw;
-    max-height: 100vh;
-  }
-  body.dark {
-    background: rgba(100, 100, 100, 0.8);
+    height: 100%;
   }
 }
 
-#fullOverlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(100, 100, 100, 0.8);
-  z-index: 2147483647;
+@media screen and (max-width: 480px) {
+  #overlay.dark {
+    position: fixed;
+    left: 0;
+    top: 73px;
+    width: 100%;
+    height: 342%;
+    background: rgba(100, 100, 100, 0.8);
+    z-index: 100;
+  }
 }
 
 .header {
@@ -105,6 +103,7 @@ body {
     top: 0;
     width: 100%;
     background-color: hsl(0, 0%, 100%);
+    z-index: 200;
   }
   .header__nav.open {
     transform: translateX(-100%);
