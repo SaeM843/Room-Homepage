@@ -16,4 +16,4 @@
 
 - HTML
 - SASS
-- JavaScrip
+- JavaScript

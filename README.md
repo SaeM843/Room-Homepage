@@ -16,4 +16,4 @@ User should be able to:
 
 - HTML
 - SASS
-- JavaScrip
+- JavaScript
