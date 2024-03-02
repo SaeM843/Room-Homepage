@@ -7,10 +7,6 @@
   // min-height: 70vh;
   overflow: hidden;
 
-  @include mq(tab) {
-    height: 60vh;
-  }
-
   @include mq(sp) {
     // grid-template-columns: 1fr;
     display: flex;
@@ -18,18 +14,22 @@
     // grid-template-rows: 1fr 1fr;
   }
 
+  // @include mq(tab) {
+  //   height: 60vh;
+  // }
+
   &__img--wrapper {
     grid-column: 1 /8;
     position: relative;
     min-height: 70vh;
     // overflow: hidden;
 
-    @include mq(sp) {
-      min-height: 85vh;
-    }
-
     @include mq(tab) {
       min-height: 60vh;
+    }
+
+    @include mq(sp) {
+      min-height: 85vh;
     }
   }
 
@@ -142,12 +142,12 @@
       font-weight: 700;
       margin-bottom: 1.5rem;
 
-      @include mq(sp) {
-        font-size: 2.5rem;
-      }
-
       @include mq(tab) {
         font-size: 1.8rem;
+      }
+
+      @include mq(sp) {
+        font-size: 2.5rem;
       }
     }
 
@@ -158,13 +158,13 @@
       line-height: 1.5;
       margin-bottom: 1.5rem;
 
-      @include mq(sp) {
-        margin-bottom: 4rem;
-      }
-
       @include mq(tab) {
         font-size: 0.8rem;
         margin-bottom: 0.3rem;
+      }
+
+      @include mq(sp) {
+        margin-bottom: 4rem;
       }
     }
 

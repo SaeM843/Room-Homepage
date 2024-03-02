@@ -68,14 +68,14 @@
       justify-content: center;
       align-items: center;
 
+      @include mq(tab) {
+        left: 5%;
+      }
+
       @include mq(sp) {
         position: relative;
         left: 6%;
         padding-left: 0;
-      }
-
-      @include mq(tab) {
-        left: 5%;
       }
 
       li a {
