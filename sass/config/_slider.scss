@@ -7,7 +7,7 @@
   // min-height: 70vh;
   overflow: hidden;
 
-  @include responsive() {
+  @include mq(sp) {
     // grid-template-columns: 1fr;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@
     min-height: 70vh;
     // overflow: hidden;
 
-    @include responsive() {
+    @include mq(sp) {
       min-height: 85vh;
     }
   }
@@ -41,27 +41,27 @@
       opacity: 1;
     }
 
-    @include responsive() {
+    @include mq(sp) {
       background-image: url("../../images/mobile-image-hero-1.jpg");
     }
 
     &:nth-child(1) {
       background-image: url("../../images/desktop-image-hero-1.jpg");
-      @include responsive() {
+      @include mq(sp) {
         background-image: url("../../images/mobile-image-hero-1.jpg");
       }
     }
 
     &:nth-child(2) {
       background-image: url("../../images/desktop-image-hero-2.jpg");
-      @include responsive() {
+      @include mq(sp) {
         background-image: url("../../images/mobile-image-hero-2.jpg");
       }
     }
 
     &:nth-child(3) {
       background-image: url("../../images/desktop-image-hero-3.jpg");
-      @include responsive() {
+      @include mq(sp) {
         background-image: url("../../images/mobile-image-hero-3.jpg");
       }
     }
@@ -74,7 +74,7 @@
     bottom: 0;
     left: 100%;
 
-    @include responsive() {
+    @include mq(sp) {
       left: unset;
       right: 0;
     }
@@ -116,7 +116,7 @@
       opacity: 1;
     }
 
-    @include responsive() {
+    @include mq(sp) {
       padding: 4rem 2rem;
     }
 
@@ -125,7 +125,7 @@
       font-weight: 700;
       margin-bottom: 1.5rem;
 
-      @include responsive() {
+      @include mq(sp) {
         font-size: 2.5rem;
       }
     }
@@ -137,7 +137,7 @@
       line-height: 1.5;
       margin-bottom: 1.5rem;
 
-      @include responsive() {
+      @include mq(sp) {
         margin-bottom: 4rem;
       }
     }
