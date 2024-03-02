@@ -36,8 +36,8 @@ li {
 body {
   font-size: 12px;
   font-family: "League Spartan", sans-serif;
-  height: 100vh;
-  width: 100vw;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 @media screen and (max-width: 480px) {
   body {
@@ -67,6 +67,11 @@ body {
   align-items: center;
   padding: 0 5rem;
   min-height: 8rem;
+}
+@media screen and (max-width: 768px) {
+  .header__wrapper {
+    padding: 0 2rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .header__logo {
@@ -102,6 +107,7 @@ body {
     left: 100%;
     top: 0;
     width: 100%;
+    height: 14vh;
     background-color: hsl(0, 0%, 100%);
     z-index: 200;
   }
@@ -117,7 +123,13 @@ body {
 @media screen and (max-width: 480px) {
   .header__nav ul {
     position: relative;
-    left: 10%;
+    left: 6%;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__nav ul {
+    left: 5%;
   }
 }
 .header__nav ul li a {
@@ -145,6 +157,8 @@ body {
 @media screen and (max-width: 480px) {
   .header__nav ul li a {
     color: hsl(0, 0%, 0%);
+    padding: 0.5rem;
+    font-size: 16px;
   }
 }
 
@@ -152,6 +166,11 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .slider {
+    height: 60vh;
+  }
 }
 @media screen and (max-width: 480px) {
   .slider {
@@ -167,6 +186,11 @@ body {
 @media screen and (max-width: 480px) {
   .slider__img--wrapper {
     min-height: 85vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slider__img--wrapper {
+    min-height: 60vh;
   }
 }
 .slider__img {
@@ -235,6 +259,12 @@ body {
   background-color: hsl(0, 0%, 0%);
   cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+  .slider__btn--wrapper .slider__btn {
+    width: 3rem;
+    height: 3rem;
+  }
+}
 .slider__btn--wrapper .slider__btn:hover {
   background-color: hsl(0, 0%, 27%);
 }
@@ -254,6 +284,11 @@ body {
   padding: 6rem;
   opacity: 0;
 }
+@media screen and (max-width: 768px) {
+  .slider__text {
+    padding: 2rem;
+  }
+}
 .slider__text.active-text {
   opacity: 1;
 }
@@ -272,6 +307,11 @@ body {
     font-size: 2.5rem;
   }
 }
+@media screen and (max-width: 768px) {
+  .slider__text .heading {
+    font-size: 1.8rem;
+  }
+}
 .slider__text .desc {
   color: hsl(0, 0%, 63%);
   font-size: 1rem;
@@ -284,6 +324,12 @@ body {
     margin-bottom: 4rem;
   }
 }
+@media screen and (max-width: 768px) {
+  .slider__text .desc {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+}
 .slider__text .arrow-icon {
   display: flex;
 }
@@ -294,8 +340,19 @@ body {
   font-size: 1rem;
   letter-spacing: 0.8rem;
 }
+@media screen and (max-width: 768px) {
+  .slider__text .arrow-icon span {
+    font-size: 0.7rem;
+    letter-spacing: 0.5rem;
+  }
+}
 .slider__text .arrow-icon img {
   margin-left: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .slider__text .arrow-icon img {
+    margin-left: 1rem;
+  }
 }
 .slider__text.active-text {
   display: block;
@@ -312,6 +369,14 @@ body {
     grid-template-rows: repeat(3, 1fr);
   }
 }
+@media screen and (max-width: 768px) {
+  .about {
+    display: flex;
+    flex-direction: row;
+    min-height: 40vh;
+    position: relative;
+  }
+}
 .about__column1 {
   background-image: url("../../images/image-about-dark.jpg");
   background-size: cover;
@@ -319,14 +384,26 @@ body {
 @media screen and (max-width: 480px) {
   .about__column1 {
     grid-column: 1/2;
+    background-size: cover;
   }
   .about__column1.dark {
     filter: blur(2px);
   }
 }
+@media screen and (max-width: 768px) {
+  .about__column1 {
+    width: 65%;
+  }
+}
 .about__column3 {
   background-image: url("../../images/image-about-light.jpg");
   background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .about__column3 {
+    width: 65%;
+    background-position: 50% 50%;
+  }
 }
 .about__column2 {
   padding: 9% 8%;
@@ -334,6 +411,16 @@ body {
 @media screen and (max-width: 480px) {
   .about__column2 {
     padding: 10% 7%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about__column2 {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 .about__column2 h2 {
@@ -347,11 +434,24 @@ body {
     margin-bottom: 25px;
   }
 }
+@media screen and (max-width: 768px) {
+  .about__column2 h2 {
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin-top: 0.5rem;
+  }
+}
 .about__column2 p {
   color: hsl(0, 0%, 63%);
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.3rem;
+}
+@media screen and (max-width: 768px) {
+  .about__column2 p {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -7,6 +7,10 @@
   // min-height: 70vh;
   overflow: hidden;
 
+  @include mq(tab) {
+    height: 60vh;
+  }
+
   @include mq(sp) {
     // grid-template-columns: 1fr;
     display: flex;
@@ -22,6 +26,10 @@
 
     @include mq(sp) {
       min-height: 85vh;
+    }
+
+    @include mq(tab) {
+      min-height: 60vh;
     }
   }
 
@@ -89,6 +97,11 @@
       background-color: var.$black;
       cursor: pointer;
 
+      @include mq(tab) {
+        width: 3rem;
+        height: 3rem;
+      }
+
       &:hover {
         background-color: var.$very-dark-gray;
       }
@@ -112,6 +125,10 @@
     padding: 6rem;
     opacity: 0;
 
+    @include mq(tab) {
+      padding: 2rem;
+    }
+
     &.active-text {
       opacity: 1;
     }
@@ -128,6 +145,10 @@
       @include mq(sp) {
         font-size: 2.5rem;
       }
+
+      @include mq(tab) {
+        font-size: 1.8rem;
+      }
     }
 
     .desc {
@@ -140,6 +161,11 @@
       @include mq(sp) {
         margin-bottom: 4rem;
       }
+
+      @include mq(tab) {
+        font-size: 0.8rem;
+        margin-bottom: 0.3rem;
+      }
     }
 
     .arrow-icon {
@@ -151,10 +177,19 @@
         color: var.$black;
         font-size: 1rem;
         letter-spacing: 0.8rem;
+
+        @include mq(tab) {
+          font-size: 0.7rem;
+          letter-spacing: 0.5rem;
+        }
       }
 
       img {
         margin-left: 1.5rem;
+
+        @include mq(tab) {
+          margin-left: 1rem;
+        }
       }
     }
 
