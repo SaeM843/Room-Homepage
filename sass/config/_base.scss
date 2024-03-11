@@ -9,8 +9,13 @@ body {
   min-width: 100vw;
   min-height: 100vh;
 
+  @include mq(pc) {
+    min-height: 100vh;
+    height: unset;
+  }
+
   @include mq(sp) {
-    height: 100%;
+    // height: 100%;
 
     // &.dark {
     //   background: rgba(100, 100, 100, 0.8);

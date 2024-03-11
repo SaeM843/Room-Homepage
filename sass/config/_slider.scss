@@ -7,11 +7,11 @@
   // min-height: 70vh;
   overflow: hidden;
 
-  @include mq(sp) {
+  @include mq(tab) {
     // grid-template-columns: 1fr;
-    display: flex;
+    // display: flex;
     flex-direction: column;
-    // grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 
   // @include mq(tab) {
