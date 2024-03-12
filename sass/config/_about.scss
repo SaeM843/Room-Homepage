@@ -1,17 +1,25 @@
 @use "./variables" as var;
 @use "./mediaQuery" as *;
+@use "./reset";
 
 .about {
+  @extend .container;
   display: grid;
   grid-template-columns: 1fr 560px 1fr;
-  min-height: 30vh;
+  height: 40vh;
+
+  @include mq(pc) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   @include mq(tab) {
-    //grid-template-columns: 1fr 370px 1fr;
-    display: flex;
-    flex-direction: row;
-    min-height: 40vh;
-    position: relative;
+    // grid-template-columns: 1fr 370px 1fr;
+    // display: flex;
+    // flex-direction: row;
+    // min-height: 40vh;
+    // position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
   @include mq(sp) {
