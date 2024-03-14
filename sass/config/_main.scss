@@ -71,6 +71,7 @@
           bottom: 12px;
           transition: 0.3s;
           transform: translateX(-50%);
+          position: absolute;
         }
 
         &:hover::after {

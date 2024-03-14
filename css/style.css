@@ -168,6 +168,7 @@ img {
   bottom: 12px;
   transition: 0.3s;
   transform: translateX(-50%);
+  position: absolute;
 }
 .main .header__nav ul a:hover::after {
   width: calc(70% - 20px);
