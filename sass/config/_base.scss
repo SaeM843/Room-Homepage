@@ -1,11 +1,76 @@
 @use "./variables" as var;
 @use "./mediaQuery" as *;
 
-body {
-  font-size: var.$default-size;
-  font-family: var.$main-font;
-  height: 100vh;
-  overflow-x: hidden;
+// body {
+//   font-size: var.$default-size;
+//   font-family: var.$main-font;
+//   height: 100vh;
+//   overflow-x: hidden;
+// }
+
+// Utility class
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0;
+}
+
+.text-wrapper {
+  width: 70%;
+  margin-inline: auto;
+}
+
+.aside__text-wrapper {
+  margin-bottom: 2.5rem;
+}
+
+.section__text-wrapper {
+  width: 80%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0;
+}
+
+.flex-box {
+  display: flex;
+  align-items: center;
+}
+
+// General
+.main img:not(.hamburger, .logo),
+section img {
+  width: 100%;
+}
+
+.slider__img--mobile {
+  display: none;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var.$black;
+}
+
+p {
+  font-size: 1em;
+  font-weight: var600;
+  line-height: 1.5em;
+  padding-block: 1.5em;
+  color: var.$dark-gray;
+}
+
+section p {
+  padding-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  min-height: 100%;
+  display: block;
 }
 
 #overlay {
