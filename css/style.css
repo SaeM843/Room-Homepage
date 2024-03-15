@@ -77,11 +77,12 @@ h1 {
   font-size: 2.5em;
   font-weight: 700;
   color: hsl(0, 0%, 0%);
+  font-family: "League Spartan", sans-serif;
 }
 
 p {
   font-size: 1em;
-  font-weight: var600;
+  font-weight: 500;
   line-height: 1.5em;
   padding-block: 1.5em;
   color: hsl(0, 0%, 63%);
@@ -250,18 +251,15 @@ img {
   position: relative;
   height: 100%;
 }
-.aside__text {
-  margin-bottom: 2.5rem;
+.aside__text-wrapper {
+  width: 70%;
+  margin-inline: auto;
 }
 @media screen and (max-width: 960px) {
-  .aside__text {
+  .aside__text-wrapper {
     margin-bottom: 0;
     padding-block: 70px;
   }
-}
-.aside .text-wrapper {
-  width: 90%;
-  padding-block: 10%;
 }
 .aside .text2,
 .aside .text3 {
@@ -315,9 +313,15 @@ img {
     padding-block: 50px;
   }
 }
-.section-2 .text-wrapper {
-  width: 90%;
-  padding-block: 10%;
+@media screen and (max-width: 595px) {
+  .section-2 .text-wrapper {
+    width: 90%;
+    padding-block: 10%;
+  }
+}
+.section-2 .stretched-text {
+  letter-spacing: 0.5rem;
+  font-size: 0.8rem;
 }
 
 @media screen and (max-width: 960px) {

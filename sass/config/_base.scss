@@ -59,11 +59,12 @@ h1 {
   font-size: 2.5em;
   font-weight: 700;
   color: var.$black;
+  font-family: var.$main-font;
 }
 
 p {
   font-size: 1em;
-  font-weight: var600;
+  font-weight: 500;
   line-height: 1.5em;
   padding-block: 1.5em;
   color: var.$dark-gray;

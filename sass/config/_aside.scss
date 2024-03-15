@@ -8,18 +8,14 @@
   position: relative;
   height: 100%;
 
-  &__text {
-    margin-bottom: 2.5rem;
+  &__text-wrapper {
+    width: 70%;
+    margin-inline: auto;
 
     @include mq(tab) {
       margin-bottom: 0;
       padding-block: 70px;
     }
-  }
-
-  .text-wrapper {
-    width: 90%;
-    padding-block: 10%;
   }
 
   .text2,

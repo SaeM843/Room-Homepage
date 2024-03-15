@@ -12,8 +12,11 @@
 
 .section-2 {
   grid-column: span 4;
+  //padding: 1.2rem 0;
 
   .section__text-wrapper {
+    // width: 80%;
+
     @include mq(pc) {
       padding-block: 30px;
     }
@@ -24,9 +27,20 @@
   }
 
   .text-wrapper {
-    width: 90%;
-    padding-block: 10%;
+    @include mq(sp) {
+      width: 90%;
+      padding-block: 10%;
+    }
   }
+
+  .stretched-text {
+    letter-spacing: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  // p {
+  //   font-size: 1rem;
+  // }
 }
 // .about {
 //   @extend .container;
