@@ -169,6 +169,7 @@ img {
     background-color: white;
     top: 0;
     left: 0;
+    z-index: 10;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s linear 0.25s;
@@ -204,6 +205,7 @@ img {
     align-items: center;
     padding: 1.5rem 5%;
     background-color: white;
+    margin: 0;
   }
 }
 .main .header__nav ul a {
