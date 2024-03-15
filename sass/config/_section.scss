@@ -1,0 +1,37 @@
+@use "./variables" as var;
+@use "./mediaQuery" as *;
+@use "./reset";
+
+.section-1,
+.section-3 {
+  grid-column: span 3;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.section-2 {
+  grid-column: span 4;
+
+  .section__text-wrapper {
+    @include mq(pc) {
+      padding-block: 30px;
+    }
+
+    @include mq(tab) {
+      padding-block: 50px;
+    }
+  }
+
+  .text-wrapper {
+    @include mq(sp) {
+      width: 90%;
+      padding-block: 10%;
+    }
+  }
+
+  .stretched-text {
+    letter-spacing: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
