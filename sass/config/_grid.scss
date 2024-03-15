@@ -1,0 +1,7 @@
+@use "./mediaQuery" as *;
+
+.grid-container {
+  @include mq(tab) {
+    grid-template-columns: 1fr;
+  }
+}

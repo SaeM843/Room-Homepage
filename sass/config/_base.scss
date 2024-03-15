@@ -9,6 +9,12 @@
 // }
 
 // Utility class
+body {
+  @include mq(sp) {
+    font-size: 14px;
+  }
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(10, 1fr);

@@ -12,6 +12,21 @@
 
 .section-2 {
   grid-column: span 4;
+
+  .section__text-wrapper {
+    @include mq(pc) {
+      padding-block: 30px;
+    }
+
+    @include mq(tab) {
+      padding-block: 50px;
+    }
+  }
+
+  .text-wrapper {
+    width: 90%;
+    padding-block: 10%;
+  }
 }
 // .about {
 //   @extend .container;

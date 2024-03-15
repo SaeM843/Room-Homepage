@@ -10,6 +10,16 @@
 
   &__text {
     margin-bottom: 2.5rem;
+
+    @include mq(tab) {
+      margin-bottom: 0;
+      padding-block: 70px;
+    }
+  }
+
+  .text-wrapper {
+    width: 90%;
+    padding-block: 10%;
   }
 
   .text2,
@@ -22,6 +32,14 @@
     position: absolute;
     bottom: 0;
     display: flex;
+
+    @include mq(tab) {
+      width: 13vw;
+      height: 48px;
+      bottom: auto;
+      top: -48px;
+      right: 0;
+    }
 
     .btn {
       display: inline-flex;
